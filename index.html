@@ -74,29 +74,34 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        /* Solusi Global untuk Semua h2 agar tidak terpotong */
+        h2 {
+            line-height: 1.4 !important;
+            padding-top: 10px !important;
+            margin-top: 5px !important;
+        }
     </style>
 </head>
 
 <body class="bg-maroon-pattern relative selection:bg-gold selection:text-maroon-900">
 
     <!-- COVER / INTRO SECTION -->
-    <div id="cover"
-        class="fixed inset-0 z-50 bg-maroon-900 flex flex-col items-center justify-center text-center p-6 transition-all duration-1000">
+    <div id="cover" class="fixed inset-0 z-50 bg-maroon-900 flex flex-col items-center justify-center text-center p-6 transition-all duration-1000">
         <div class="absolute inset-0 bg-black/40 z-0"></div>
-        <div class="relative z-10 max-w-md w-full p-8 border-2 border-gold/40 rounded-2xl backdrop-blur-md bg-maroon-950/60 shadow-2xl"
-            data-aos="zoom-in" data-aos-duration="1000">
+        <!-- Menambahkan pt-6 dan pb-4 agar ada ruang aman di dalam kotak -->
+        <div class="relative z-10 max-w-md w-full p-8 pt-10 pb-10 border-2 border-gold/40 rounded-2xl backdrop-blur-md bg-maroon-950/60 shadow-2xl" data-aos="zoom-in" data-aos-duration="1000">
             <p class="text-gold uppercase tracking-[0.3em] text-xs mb-3 font-medium">The Wedding Of</p>
-            <h1 class="font-script text-6xl md:text-7xl gold-gradient mb-4">Steven & Andrea</h1>
+            <!-- Menambahkan line-height yang longgar (leading-relaxed) dan padding-top (pt-2) -->
+            <h1 class="font-script text-6xl md:text-7xl gold-gradient mb-6 leading-relaxed pt-2">Steven & Andrea</h1>
             <div class="w-16 h-[1px] bg-gold mx-auto mb-6"></div>
-
+            
             <p class="text-xs uppercase tracking-widest text-gold-light/80 mb-2">Kepada Yth. Bapak/Ibu/Saudara/i</p>
-            <div id="guest-name"
-                class="text-xl font-bold text-white mb-6 tracking-wide px-4 py-2 bg-maroon-900/80 rounded-lg border border-gold/30 inline-block w-full">
+            <div id="guest-name" class="text-xl font-bold text-white mb-6 tracking-wide px-4 py-2 bg-maroon-900/80 rounded-lg border border-gold/30 inline-block w-full">
                 Tamu Undangan
             </div>
-
-            <button onclick="openInvitation()"
-                class="group relative inline-flex items-center justify-center px-8 py-3 text-xs uppercase tracking-widest font-semibold text-maroon-950 transition-all duration-300 bg-gold rounded-full hover:bg-gold-light hover:scale-105 shadow-lg">
+            
+            <button onclick="openInvitation()" class="group relative inline-flex items-center justify-center px-8 py-3 text-xs uppercase tracking-widest font-semibold text-maroon-950 transition-all duration-300 bg-gold rounded-full hover:bg-gold-light hover:scale-105 shadow-lg">
                 <i class="fa-solid fa-envelope-open mr-2 text-sm"></i> Buka Undangan
             </button>
         </div>
@@ -120,12 +125,13 @@
 
         <!-- HERO SECTION -->
         <header
-            class="relative min-h-screen flex flex-col items-center justify-center text-center p-6 bg-cover bg-center"
+            class="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-16 bg-cover bg-center"
             style="background-image: linear-gradient(to bottom, rgba(52,0,13,0.7), rgba(56,0,13,0.9)), url('https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&q=80&w=1920');">
-            <div class="max-w-2xl mx-auto z-10" data-aos="fade-up" data-aos-duration="1200">
+            <div class="max-w-2xl mx-auto z-10 pt-10" data-aos="fade-up" data-aos-duration="1200">
                 <p class="text-gold uppercase tracking-[0.4em] text-xs md:text-sm mb-4 font-semibold">The Holy Matrimony
                     Of</p>
-                <h1 class="font-script text-7xl md:text-9xl gold-gradient mb-6 leading-none">Steven & Andrea</h1>
+                <!-- Menambahkan padding-top dan line-height agar huruf S tidak terpotong -->
+                <h1 class="font-script text-7xl md:text-9xl gold-gradient mb-6 leading-tight pt-4">Steven & Andrea</h1>
                 <p class="text-sm md:text-base tracking-[0.2em] text-gold-light uppercase mb-8">Sabtu, 11 September 2027
                 </p>
                 <div
